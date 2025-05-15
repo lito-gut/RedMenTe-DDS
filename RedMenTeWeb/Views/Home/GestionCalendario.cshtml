@@ -1,0 +1,66 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container my-5" style="height: auto; max-width: 1200px;">
+    <!-- Texto introductorio -->
+    <h1 class="text-center mb-4" style="color: #10B981;">Gestión de Calendario</h1>
+    <p class="text-center mb-4" style="color: #333333;">
+        Este módulo permite al administrador gestionar las actividades del calendario: puedes crear nuevas actividades, editar o eliminar actividades existentes, y visualizar el número de participantes inscritos.
+    </p>
+
+    <!-- Botones para gestionar actividades -->
+    <div class="text-center mb-4">
+        <button class="btn btn-success" style="background-color: #10B981; border-color: #10B981;">Crear Nueva Actividad</button>
+        <button class="btn btn-primary" style="background-color: #7C3AED; border-color: #7C3AED;">Modificar Actividades</button>
+        <button class="btn btn-danger">Eliminar Actividades</button>
+    </div>
+
+    <!-- Tabla de actividades existentes -->
+    <div class="card border-0 shadow">
+        <div class="card-header text-white" style="background-color: #7C3AED;">
+            <h5 class="m-0">Actividades Programadas</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr style="color: #6B7280;">
+                        <th>Nombre de la Actividad</th>
+                        <th>Fecha</th>
+                        <th>Participantes Inscritos</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="color: #333333;">Seminario de Energías Renovables</td>
+                        <td style="color: #333333;">10/04/2025</td>
+                        <td style="color: #333333;">150</td>
+                        <td>
+                            <button class="btn btn-outline-success btn-sm" style="border-color: #10B981; color: #10B981;">Editar</button>
+                            <button class="btn btn-outline-danger btn-sm">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #333333;">Workshop de Innovación Educativa</td>
+                        <td style="color: #333333;">15/04/2025</td>
+                        <td style="color: #333333;">80</td>
+                        <td>
+                            <button class="btn btn-outline-success btn-sm" style="border-color: #10B981; color: #10B981;">Editar</button>
+                            <button class="btn btn-outline-danger btn-sm">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #333333;">Taller de Tecnología Avanzada</td>
+                        <td style="color: #333333;">20/04/2025</td>
+                        <td style="color: #333333;">50</td>
+                        <td>
+                            <button class="btn btn-outline-success btn-sm" style="border-color: #10B981; color: #10B981;">Editar</button>
+                            <button class="btn btn-outline-danger btn-sm">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

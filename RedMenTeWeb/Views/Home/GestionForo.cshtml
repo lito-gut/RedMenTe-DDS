@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid py-5" style="height: 100vh;">
+    <div class="container py-5">
+        <h2 class="font-weight-bold" style="color: #10B981;">Administración del Foro</h2>
+        <p class="font-weight-bold" style="color: #333333;">Gestiona las publicaciones, respuestas y reportes del foro.</p>
+
+        <!-- Publicaciones Reportadas -->
+        <div class="card border-0 shadow mb-4">
+            <div class="card-header text-white" style="background-color: #FF0000;">
+                <h5 class="m-0">Publicaciones Reportadas</h5>
+            </div>
+            <div class="card-body">
+                <div class="media mb-4">
+                    <img class="rounded-circle mr-3" src="assets/img/user-placeholder.png" alt="Usuario" style="width:50px;height:50px;">
+                    <div class="media-body">
+                        <h5 class="mt-0" style="color: #FF0000;">Juan Pérez <small class="text-muted">Hace 2 horas</small></h5>
+                        <p>Contenido inapropiado reportado por varios usuarios.</p>
+                        <button class="btn btn-outline-danger btn-sm" style="color: #FF0000; border-color: #FF0000;">Eliminar</button>
+                        <button class="btn btn-outline-warning btn-sm" style="color: #FFA500; border-color: #FFA500;">Ocultar</button>
+                        <button class="btn btn-outline-primary btn-sm" style="color: #7C3AED; border-color: #7C3AED;">Marcar como Revisado</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Todas las Publicaciones -->
+        <div class="card border-0 shadow mb-4">
+            <div class="card-header text-white" style="background-color: #7C3AED;">
+                <h5 class="m-0">Todas las Publicaciones</h5>
+            </div>
+            <div class="card-body">
+                <div class="media mb-4">
+                    <img class="rounded-circle mr-3" src="assets/img/user-placeholder.png" alt="Usuario" style="width:50px;height:50px;">
+                    <div class="media-body">
+                        <h5 class="mt-0" style="color: #7C3AED;">Carlos Gómez <small class="text-muted">Hace 3 días</small></h5>
+                        <p>Consulta sobre proyectos de energía renovable.</p>
+                        <button class="btn btn-outline-danger btn-sm" style="color: #FF0000; border-color: #FF0000;">Eliminar</button>
+                        <button class="btn btn-outline-warning btn-sm" style="color: #FFA500; border-color: #FFA500;">Fijar</button>
+                        <button class="btn btn-outline-secondary btn-sm" style="color: #333333; border-color: #333333;">Editar</button>
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <img class="rounded-circle mr-3" src="assets/img/user-placeholder.png" alt="Usuario" style="width:50px;height:50px;">
+                    <div class="media-body">
+                        <h5 class="mt-0" style="color: #7C3AED;">María López <small class="text-muted">Hace 1 día</small></h5>
+                        <p>Comparto un artículo interesante sobre innovación educativa.</p>
+                        <button class="btn btn-outline-danger btn-sm" style="color: #FF0000; border-color: #FF0000;">Eliminar</button>
+                        <button class="btn btn-outline-warning btn-sm" style="color: #FFA500; border-color: #FFA500;">Fijar</button>
+                        <button class="btn btn-outline-secondary btn-sm" style="color: #333333; border-color: #333333;">Editar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publicaciones Fijadas -->
+        <div class="card border-0 shadow">
+            <div class="card-header text-white" style="background-color: #10B981;">
+                <h5 class="m-0">Publicaciones Fijadas</h5>
+            </div>
+            <div class="card-body">
+                <div class="media mb-4">
+                    <img class="rounded-circle mr-3" src="assets/img/user-placeholder.png" alt="Usuario" style="width:50px;height:50px;">
+                    <div class="media-body">
+                        <h5 class="mt-0" style="color: #10B981;">María López <small class="text-muted">Hace 1 día</small></h5>
+                        <p>Publicación destacada sobre innovación educativa.</p>
+                        <button class="btn btn-outline-danger btn-sm" style="color: #FF0000; border-color: #FF0000;">Desfijar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

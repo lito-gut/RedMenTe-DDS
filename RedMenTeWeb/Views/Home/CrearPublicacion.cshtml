@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container my-5" style="height: 90vh; max-width: 1200px;">
+    <h2 class="font-weight-bold">Crear Nueva Publicación</h2>
+    <p class="font-weight-bold" style="color: #7C3AED;">Comparte tus ideas, preguntas o información relevante con la comunidad.</p>
+    <div class="card border-0 shadow">
+        <div class="card-body">
+            <form>
+                <div class="form-group"><label for="post-title">Título</label><input class="form-control form-control" type="text" id="post-title" placeholder="Escribe el título de tu publicación" required=""></div>
+                <div class="form-group">
+                    <label for="post-category">Categoría</label><select class="form-control" id="post-category" required="">
+                        <option value="">Selecciona una categoría</option>
+                        <option value="1">Energía Renovable</option>
+                        <option value="2">Innovación Educativa</option>
+                        <option value="3">Tecnología</option>
+                    </select>
+                </div>
+                <div class="form-group"><label for="post-content">Contenido</label><textarea class="form-control form-control" id="post-content" placeholder="Escribe el contenido de tu publicación" required="" rows="5"></textarea></div><button class="btn btn-primary" style="background-color: #7C3AED; border-color: #7C3AED;" type="submit">Publicar</button>
+            </form>
+        </div>
+    </div>
+</div>

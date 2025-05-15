@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card border-0 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #7C3AED;">Edición 2023</h5>
+                        <h3 class="font-weight-bold" style="color: #333333;">Progreso Promedio: 75%</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #10B981;">Edición 2024</h5>
+                        <h3 class="font-weight-bold" style="color: #333333;">Progreso Promedio: 85%</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card border-0 shadow mb-4">
+            <div class="card-header text-white" style="background-color: #7C3AED;">
+                <h5 class="m-0">Filtros</h5>
+            </div>
+            <div class="card-body">
+                <form class="row">
+                    <div class="col-md-6">
+                        <label for="edition1" style="color: #7C3AED;">Edición 1</label>
+                        <select class="form-control" id="edition1">
+                            <option value="" style="color: #333333;">Selecciona una edición</option>
+                            <option value="2023" style="color: #333333;">2023</option>
+                            <option value="2024" style="color: #333333;">2024</option>
+                            <option value="2025" style="color: #333333;">2025</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edition2" style="color: #7C3AED;">Edición 2</label>
+                        <select class="form-control" id="edition2">
+                            <option value="" style="color: #333333;">Selecciona una edición</option>
+                            <option value="2023" style="color: #333333;">2023</option>
+                            <option value="2024" style="color: #333333;">2024</option>
+                            <option value="2025" style="color: #333333;">2025</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card border-0 shadow">
+            <div class="card-header text-white" style="background-color: #10B981;">
+                <h5 class="m-0">Resultados de la Comparación</h5>
+            </div>
+            <div class="card-body">
+                <p><strong style="color: #7C3AED;">Tendencia:</strong> Incremento del 10% en el progreso general entre las ediciones seleccionadas.</p>
+                <div>
+                    <table class="table table-striped">
+                        <thead style="color: #7C3AED;">
+                            <tr>
+                                <th>Proyecto</th>
+                                <th>Edición 2023</th>
+                                <th>Edición 2024</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="color: #333333;">Energía Renovable</td>
+                                <td style="color: #7C3AED;">80%</td>
+                                <td style="color: #10B981;">90%</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #333333;">Innovación Educativa</td>
+                                <td style="color: #7C3AED;">70%</td>
+                                <td style="color: #10B981;">85%</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #333333;">Tecnología Avanzada</td>
+                                <td style="color: #7C3AED;">75%</td>
+                                <td style="color: #10B981;">80%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

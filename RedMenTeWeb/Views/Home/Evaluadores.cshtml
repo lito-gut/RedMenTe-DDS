@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid py-5" style="height: 100vh;">
+    <!-- Introducción al módulo -->
+    <div class="text-center mb-5">
+        <h1 class="font-weight-bold" style="color: #10B981;">Módulo de Evaluadores</h1>
+        <p class="font-weight-bold" style="color: #333333;">
+            Este módulo está diseñado para facilitar la gestión y análisis de las evaluaciones realizadas por los diferentes evaluadores.
+            Aquí podrás comparar métricas clave entre proyectos y registrar o consultar retroalimentaciones detalladas.
+        </p>
+    </div>
+
+    <!-- Cards de acceso -->
+    <div class="row">
+        <!-- Card 1: Comparación -->
+        <div class="col-md-6 mb-4">
+            <div class="card border-0 shadow">
+                <div class="card-body text-center">
+                    <h3 class="font-weight-bold" style="color: #10B981;">Vista de Comparación</h3>
+                    <p class="text-muted">Accede a la comparación de métricas entre diferentes ediciones y proyectos.</p>
+                    <a href="@Url.Action("Comparaciones", "Home")" class="btn btn-primary" style="background-color: #7C3AED; border-color: #7C3AED;">
+                        Ir a Comparación
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Retroalimentación -->
+        <div class="col-md-6 mb-4">
+            <div class="card border-0 shadow">
+                <div class="card-body text-center">
+                    <h3 class="font-weight-bold" style="color: #10B981;">Vista de Retroalimentación</h3>
+                    <p class="text-muted">Consulta o registra retroalimentaciones sobre los proyectos evaluados.</p>
+                    <a href="@Url.Action("Retroalimentacion", "Home")" class="btn btn-primary" style="background-color: #7C3AED; border-color: #7C3AED;">
+                        Ir a Retroalimentación
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

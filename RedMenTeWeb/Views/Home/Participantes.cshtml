@@ -1,0 +1,83 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid py-5" style="height: auto; max-width: 1200px;">
+    <h1 class="text-center mb-4" style="color: #10B981;">Reportes de Participantes</h1>
+    <div class="container py-5">
+        <!-- Tarjetas de resumen -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card border-0 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #10B981;">Total Participantes</h5>
+                        <h3 class="font-weight-bold" style="color: #333333;">1,250</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #10B981;">Participantes Activas</h5>
+                        <h3 class="font-weight-bold" style="color: #333333;">1,000</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #10B981;">Participantes Inactivas</h5>
+                        <h3 class="font-weight-bold" style="color: #333333;">250</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de distribución por región -->
+        <div class="card border-0 shadow">
+            <div class="card-header text-white" style="background-color: #7C3AED;">
+                <h5 class="m-0">Distribución por Región</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr style="color: #6B7280;">
+                            <th>Región</th>
+                            <th>Participantes Activas</th>
+                            <th>Participantes Inactivas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="color: #333333;">San José</td>
+                            <td style="color: #333333;">500</td>
+                            <td style="color: #10B981;">50</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #333333;">Alajuela</td>
+                            <td style="color: #333333;">300</td>
+                            <td style="color: #10B981;">100</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #333333;">Cartago</td>
+                            <td style="color: #333333;">200</td>
+                            <td style="color: #10B981;">50</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #333333;">Limón</td>
+                            <td style="color: #333333;">150</td>
+                            <td style="color: #10B981;">50</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #333333;">Puntarenas</td>
+                            <td style="color: #333333;">100</td>
+                            <td style="color: #10B981;">50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

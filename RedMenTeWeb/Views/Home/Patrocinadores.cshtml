@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid py-5" style="height: 100vh;">
+    <h1 class="text-center mb-4" style="color: #10B981;">Mis Contribuciones</h1>
+    <p class="text-center mb-4" style="color: #333333;">
+        Este módulo ofrece una visión integral de las contribuciones realizadas, resaltando el impacto generado en diversos proyectos. Utiliza las métricas clave y tablas interactivas para analizar los resultados y evaluar el progreso.
+    </p>
+    <div class="container py-5">
+        <!-- Tarjetas de resumen -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card border-0 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #10B981;">Total Contribuciones</h5>
+                        <h3 class="font-weight-bold" style="color: #333333;">5</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #10B981;">Proyectos Impactados</h5>
+                        <h3 class="font-weight-bold" style="color: #333333;">3</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #10B981;">Impacto General</h5>
+                        <h3 class="font-weight-bold" style="color: #333333;">85%</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de detalles de contribuciones -->
+        <div class="card border-0 shadow">
+            <div class="card-header text-white" style="background-color: #7C3AED;">
+                <h5 class="m-0">Detalles de Contribuciones</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr style="color: #6B7280;">
+                            <th>Proyecto</th>
+                            <th>Contribución</th>
+                            <th>Impacto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="color: #333333;">Energía Renovable</td>
+                            <td style="color: #333333;">$10,000</td>
+                            <td style="color: #10B981;">40%</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #333333;">Innovación Educativa</td>
+                            <td style="color: #333333;">$8,000</td>
+                            <td style="color: #10B981;">35%</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #333333;">Tecnología Avanzada</td>
+                            <td style="color: #333333;">$5,000</td>
+                            <td style="color: #10B981;">25%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

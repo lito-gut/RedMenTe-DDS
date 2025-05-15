@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container my-5" style="height: 90vh; max-width: 1200px;">
+    <h2 class="font-weight-bold">Detalle de Publicación</h2>
+    <div class="card border-0 shadow mb-4">
+        <div class="card-body">
+            <h4>¿Alguien tiene experiencia con proyectos de energía renovable?</h4>
+            <p class="text-muted">Publicado por Juan Pérez - Hace 2 horas</p>
+            <p>Estoy buscando ideas para mi proyecto de energía renovable. ¿Alguien tiene experiencia en este campo?</p>
+            <div class="d-flex justify-content-between">
+                <div><button class="btn btn-outline-primary btn-sm" style="border-color: #7C3AED; color: #7C3AED;">Marcar como Favorita</button><button class="btn btn-outline-secondary btn-sm" style="border-color: #7C3AED; color: #7C3AED;">Compartir</button><button class="btn btn-outline-danger btn-sm">Reportar</button></div>
+                <div><button class="btn btn-success btn-sm">👍 Me gusta</button><button class="btn btn-danger btn-sm">👎 No me gusta</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow mb-4">
+        <div class="card-header text-white" style="background-color: #10B981;">
+            <h5 class="m-0">Respuestas</h5>
+        </div>
+        <div class="card-body">
+            <div class="media mb-4">
+                <img class="rounded-circle mr-3" src="assets/img/user-placeholder.png" alt="Usuario" style="width:50px;height:50px;">
+                <div class="media-body">
+                    <h5 class="mt-0">María López <small class="text-muted">Hace 1 hora</small></h5>
+                    <p>Te recomiendo revisar los proyectos de energía solar en Costa Rica. Son un buen punto de partida.</p><button class="btn btn-link" style="color: #7C3AED;">Responder</button><button class="btn btn-link text-danger">Reportar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow">
+        <div class="card-header text-white" style="background-color: #10B981;">
+            <h5 class="m-0">Agregar Respuesta</h5>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group"><textarea class="form-control form-control" placeholder="Escribe tu respuesta aquí..." rows="5"></textarea></div><button class="btn btn-primary" style="background-color: #7C3AED; border-color: #7C3AED;" type="submit">Responder</button>
+            </form>
+        </div>
+    </div>
+</div>
+

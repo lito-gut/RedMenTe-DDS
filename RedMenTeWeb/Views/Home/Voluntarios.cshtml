@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container my-5" style="height: 100vh;">
+    <!-- Título e introducción -->
+    <h1 class="text-center mb-4" style="color: #10B981">Gestión de Voluntarios</h1>
+    <p class="text-center mb-4" style="color: #333333;">
+        Este módulo permite al administrador visualizar a todos los voluntarios registrados y gestionar sus tareas o roles asignados dentro de la organización.
+    </p>
+
+    <!-- Tabla de voluntarios -->
+    <div class="card border-0 shadow">
+        <div class="card-header text-white" style="background-color: #7C3AED;">
+            <h5 class="m-0">Lista de Voluntarios</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr style="color: #6B7280;">
+                        <th>Nombre</th>
+                        <th>Profesión</th>
+                        <th>Estudios</th>
+                        <th>Historial</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Voluntario 1 -->
+                    <tr>
+                        <td style="color: #333333;">Juan Pérez</td>
+                        <td style="color: #333333;">Ingeniero Ambiental</td>
+                        <td style="color: #333333;">Licenciatura en Ingeniería Ambiental</td>
+                        <td style="color: #333333;">
+                            <button class="btn btn-outline-primary btn-sm" style="border-color: #7C3AED; color: #7C3AED;">
+                                Ver Historial
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-success btn-sm" style="background-color: #10B981; border-color: #10B981;">
+                                Asignar Tarea/Rol
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Voluntario 2 -->
+                    <tr>
+                        <td style="color: #333333;">María López</td>
+                        <td style="color: #333333;">Docente</td>
+                        <td style="color: #333333;">Maestría en Pedagogía</td>
+                        <td style="color: #333333;">
+                            <button class="btn btn-outline-primary btn-sm" style="border-color: #7C3AED; color: #7C3AED;">
+                                Ver Historial
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-success btn-sm" style="background-color: #10B981; border-color: #10B981;">
+                                Asignar Tarea/Rol
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Voluntario 3 -->
+                    <tr>
+                        <td style="color: #333333;">Carlos Rodríguez</td>
+                        <td style="color: #333333;">Médico</td>
+                        <td style="color: #333333;">Doctorado en Medicina</td>
+                        <td style="color: #333333;">
+                            <button class="btn btn-outline-primary btn-sm" style="border-color: #7C3AED; color: #7C3AED;">
+                                Ver Historial
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-success btn-sm" style="background-color: #10B981; border-color: #10B981;">
+                                Asignar Tarea/Rol
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

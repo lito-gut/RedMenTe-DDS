@@ -1,0 +1,57 @@
+﻿@model RedMenTeWeb.Models.UsuarioModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutExterno.cshtml";
+}
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: calc(100vh - 200px);">
+    <div class="row col-xl-10 col-lg-12">
+        <!-- Sección de imagen -->
+        <div class="col-md-6 d-none d-md-block">
+            <img src="~/Templates/img/LogotipoRedMenTe.jpg" alt="Imagen Lateral" style="width: 100%; height: auto; border-radius: 10px;" />
+        </div>
+        <!-- Sección del formulario -->
+        <div class="col-md-6">
+            <div class="card o-hidden border-0 shadow-lg">
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <h1 class="h4" style="color: #7C3AED;">Iniciar Sesión</h1>
+                    </div>
+
+                    @if (ViewBag.Mensaje != null)
+                    {
+                        <div class="alert alert-warning text-center" style="background-color: #10B981; color: #FFFFFF;">
+                            @ViewBag.Mensaje
+                        </div>
+                    }
+
+                    @using (Html.BeginForm("IniciarSesion", "Home"))
+                    {
+                        <form class="user">
+                            <div class="form-group">
+                                @Html.TextBoxFor(x => x.Identificacion, new { @class = "form-control", @placeholder = "Identificación", @style = "color: #333333; border: 1px solid #7C3AED;" })
+                            </div>
+                            <div class="form-group">
+                                @Html.TextBoxFor(x => x.Contrasenna, new { @class = "form-control", @placeholder = "Contraseña", @type = "password", @style = "color: #333333; border: 1px solid #7C3AED;" })
+                            </div>
+                            <input type="submit" class="btn btn-block" value="Procesar" style="background-color: #10B981; color: #FFFFFF; border: none;"
+                                   onmouseover="this.style.backgroundColor='#7C3AED'; this.style.color='#FFFFFF';"
+                                   onmouseout="this.style.backgroundColor='#10B981'; this.style.color='#FFFFFF';">
+                        </form>
+                    }
+                    <hr>
+                    <div class="text-center">
+                        <a class="small" href="@Url.Action("RecuperarContrasenna", "Home")" style="color: #10B981;">Recuperar Contraseña?</a>
+                    </div>
+                    <div class="text-center">
+                        <a class="small" href="@Url.Action("RegistrarCuenta", "Home")" style="color: #10B981;">Crear una cuenta!</a>
+                    </div>
+                    <div class="text-center">
+                        <a class="small" href="@Url.Action("Index", "Home")" style="color: #10B981;">Pantalla Principal!</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

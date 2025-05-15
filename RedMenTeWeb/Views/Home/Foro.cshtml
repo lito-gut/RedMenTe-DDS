@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container my-5" style="height: 90vh; max-width: 1200px;">
+    <h2 class="font-weight-bold">Busqueda Avanzada</h2>
+    <p class="font-weight-bold" style="color: #7C3AED;">Explora las publicaciones recientes, populares y participa en las discusiones.</p>
+    <div class="card border-0 shadow mb-4">
+        <div class="card-header text-white" style="background-color: #10B981;">
+            <h5 class="m-0">Filtros</h5>
+        </div>
+        <div class="card-body">
+            <form class="row">
+                <div class="col-md-3">
+                    <label for="category">Categoría</label><select class="form-control" id="category">
+                        <option value="">Todas las Categorías</option>
+                        <option value="1">Energía Renovable</option>
+                        <option value="2">Innovación Educativa</option>
+                        <option value="3">Tecnología</option>
+                    </select>
+                </div>
+                <div class="col-md-3"><label for="date">Fecha</label><input class="form-control form-control" type="date" id="date"></div>
+                <div class="col-md-3">
+                    <label for="popularity">Popularidad</label><select class="form-control" id="popularity">
+                        <option value="">Todas</option>
+                        <option value="popular">Más Populares</option>
+                        <option value="recent">Más Recientes</option>
+                    </select>
+                </div>
+                <div class="col-md-3"><label for="search">Buscar</label><input class="form-control form-control" type="text" id="search" placeholder="Buscar publicaciones..."></div>
+            </form>
+        </div>
+    </div>
+
+    <h2 class="font-weight-bold">Publicaciones del Foro</h2>
+    <p class="font-weight-bold" style="color: #7C3AED;">Explora las publicaciones recientes y participa en las discusiones.</p>
+    <a href="@Url.Action("CrearPublicacion", "Home")" class="btn btn-primary" style="background-color: #7C3AED; border-color: #7C3AED;">Crear Publicación</a>
+    <div class="card border-0 shadow">
+        <div class="card-header text-white" style="background-color: #10B981;">
+            <h5 class="m-0">Publicaciones Recientes</h5>
+        </div>
+        <div class="card-body">
+            <div class="media mb-4">
+                <img class="rounded-circle mr-3" src="assets/img/user-placeholder.png" alt="Usuario" style="width:50px;height:50px;">
+                <div class="media-body">
+                    <h5 class="mt-0">Juan Pérez <small class="text-muted">Hace 2 horas</small></h5>
+                    <p>¿Alguien tiene experiencia con proyectos de energía renovable? Estoy buscando ideas para mi proyecto.</p><a class="btn btn-link" style="color: #7C3AED;" role="button" href="@Url.Action("DetalleForo","Home")">Ver Publicación</a>
+                </div>
+            </div>
+            <div class="media mb-4">
+                <img class="rounded-circle mr-3" src="assets/img/user-placeholder.png" alt="Usuario" style="width:50px;height:50px;">
+                <div class="media-body">
+                    <h5 class="mt-0">María López <small class="text-muted">Hace 1 día</small></h5>
+                    <p>Comparto un artículo interesante sobre innovación educativa. ¡Espero que les sea útil!</p><a class="btn btn-link" style="color: #7C3AED;" role="button" href="@Url.Action("DetalleForo","Home")">Ver Publicación</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

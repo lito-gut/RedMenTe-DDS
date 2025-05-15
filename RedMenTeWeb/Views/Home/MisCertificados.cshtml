@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid my-5" style="height: 90vh; max-width: 1200px;">
+    <h2 class="font-weight-bold" style="color: #333333;">Mis Certificados</h2>
+    <p class="font-weight-bold" style="color: #7C3AED;">Consulta y descarga tus certificados obtenidos.</p>
+
+    <!-- Certificados Obtenidos -->
+    <div class="card border-0 shadow mb-4">
+        <div class="card-header text-white" style="background-color: #7C3AED;">
+            <h5 class="m-0">Certificados Obtenidos</h5>
+        </div>
+        <div class="card-body">
+            <div class="media mb-4">
+                <img class="rounded mr-3" src="assets/img/certificate-placeholder.png" alt="Certificado" style="width:100px;height:100px;">
+                <div class="media-body">
+                    <h5 class="mt-0" style="color: #7C3AED;">Certificado en Energía Renovable</h5>
+                    <p class="text-muted">Emitido el: 15 de marzo de 2025</p>
+                    <button class="btn btn-outline-primary btn-sm" style="color: #7C3AED; border-color: #7C3AED;">Descargar PDF</button>
+                    <button class="btn btn-outline-secondary btn-sm" style="color: #7C3AED; border-color: #7C3AED;">Descargar PNG</button>
+                    <a class="btn btn-link" style="color: #7C3AED;" role="button" href="@Url.Action("DetalleCertificados", "Home")">Ver Detalle</a>
+                </div>
+            </div>
+            <div class="media mb-4">
+                <img class="rounded mr-3" src="assets/img/certificate-placeholder.png" alt="Certificado" style="width:100px;height:100px;">
+                <div class="media-body">
+                    <h5 class="mt-0" style="color: #7C3AED;">Certificado en Innovación Educativa</h5>
+                    <p class="text-muted">Emitido el: 10 de febrero de 2025</p>
+                    <button class="btn btn-outline-primary btn-sm" style="color: #7C3AED; border-color: #7C3AED;">Descargar PDF</button>
+                    <button class="btn btn-outline-secondary btn-sm" style="color: #7C3AED; border-color: #7C3AED;">Descargar PNG</button>
+                    <a class="btn btn-link" style="color: #7C3AED;" role="button" href="@Url.Action("DetalleCertificados", "Home")">Ver Detalle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificados Pendientes -->
+    <div class="card border-0 shadow">
+        <div class="card-header text-white" style="background-color: #FFA500;">
+            <h5 class="m-0">Certificados Pendientes</h5>
+        </div>
+        <div class="card-body">
+            <div class="media mb-4">
+                <img class="rounded mr-3" src="assets/img/certificate-placeholder.png" alt="Certificado" style="width:100px;height:100px;">
+                <div class="media-body">
+                    <h5 class="mt-0" style="color: #7C3AED;">Certificado en Tecnología Avanzada</h5>
+                    <p class="text-muted">Estado: En proceso</p>
+                    <button class="btn btn-outline-info btn-sm" style="color: #7C3AED; border-color: #7C3AED;">Ver Progreso</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

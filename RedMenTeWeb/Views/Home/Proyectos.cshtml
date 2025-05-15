@@ -1,0 +1,72 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid my-5" style="height: 90vh; max-width: 1200px;">
+    <!-- Espacio para Recordatorios y Progreso -->
+    <h2 class="font-weight-bold mt-5">Recordatorios y Progreso</h2>
+    <p class="font-weight-bold" style="color: #7C3AED;">Monitorea tus recordatorios y realiza un seguimiento de tu progreso en diferentes actividades.</p>
+    <div class="text-center">
+        <a href="@Url.Action("RecordatorioProgreso", "Home")" class="btn btn-primary" style="background-color: #7C3AED; border-color: #7C3AED;">Ir a Recordatorios y Progreso</a>
+    </div>
+    <h2 class="font-weight-bold">Proyectos</h2>
+    <p class="font-weight-bold" style="color: #7C3AED;">Consulta los proyectos organizados por año, edición o por objetivos de desarrollo sostenible (ODS).</p>
+    <div class="card border-0 shadow mb-4">
+        <div class="card-header text-white" style="background-color: #10B981;" >
+            <h5 class="m-0">Filtros de Proyectos</h5>
+        </div>
+        <div class="card-body">
+            <form class="row">
+                <div class="col-md-4">
+                    <label for="year">Año</label>
+                    <select class="form-control" id="year">
+                        <option value="">Seleccionar Año</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="edition">Edición</label>
+                    <select class="form-control" id="edition">
+                        <option value="">Seleccionar Edición</option>
+                        <option value="1">Edición 1</option>
+                        <option value="2">Edición 2</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="ods">ODS</label>
+                    <select class="form-control" id="ods">
+                        <option value="">Seleccionar ODS</option>
+                        <option value="1">Fin de la Pobreza</option>
+                        <option value="2">Hambre Cero</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="card border-0 shadow mb-4">
+        <div class="card-header text-white" style="background-color: #10B981;">
+            <h5 class="m-0">Lista de Proyectos</h5>
+        </div>
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Proyecto 1:</strong><span> Innovación en Educación </span><button class="btn btn-link" style="color: #7C3AED; float: right;">Ver Detalles</button></li>
+                <li class="list-group-item"><strong>Proyecto 2:</strong><span> Energía Renovable </span><button class="btn btn-link" style="color: #7C3AED; float: right;">Ver Detalles</button></li>
+            </ul>
+        </div>
+    </div>
+    <h2 class="font-weight-bold">Cursos</h2>
+    <p class="font-weight-bold" style="color: #7C3AED;">Consulta los cursos disponibles, tu progreso y las actividades pendientes.</p>
+    <div class="card border-0 shadow">
+        <div class="card-header text-white" style="background-color: #10B981;">
+            <h5 class="m-0">Lista de Cursos</h5>
+        </div>
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Curso 1:</strong><span> Introducción a la Programación </span><button class="btn btn-link" style="color: #7C3AED; float: right;">Ver Detalles</button></li>
+                <li class="list-group-item"><strong>Curso 2:</strong><span> Gestión de Proyectos </span><button class="btn btn-link" style="color: #7C3AED; float: right;">Ver Detalles</button></li>
+            </ul>
+        </div>
+    </div>
+
+</div>

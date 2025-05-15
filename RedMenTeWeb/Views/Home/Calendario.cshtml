@@ -1,0 +1,94 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container my-5" style="height: 90vh; max-width: 1200px;">
+    <!-- Texto introductorio -->
+    <h1 class="text-center mb-4" style="color: #333333;">Calendario de Actividades</h1>
+    <p class="text-center mb-4" style="color: #333333;">
+        Este módulo te permite organizar y visualizar las actividades programadas. Aquí puedes consultar los detalles de los eventos existentes y gestionar tu participación en actividades específicas. ¡Haz que tu tiempo sea más productivo!
+    </p>
+
+    <!-- Filtros por mes y año -->
+    <div class="text-center mb-4">
+        <form class="form-inline justify-content-center">
+            <div class="form-group mx-2">
+                <label for="month" class="mr-2">Mes:</label>
+                <select id="month" class="form-control">
+                    <option value="01">Enero</option>
+                    <option value="02">Febrero</option>
+                    <option value="03">Marzo</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Mayo</option>
+                    <option value="06">Junio</option>
+                    <option value="07">Julio</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+            </div>
+            <div class="form-group mx-2">
+                <label for="year" class="mr-2">Año:</label>
+                <input id="year" type="number" class="form-control" min="2000" max="2100" placeholder="2025">
+            </div>
+            <button type="submit" class="btn btn-primary" style="background-color: #7C3AED; border-color: #7C3AED;">Filtrar</button>
+        </form>
+    </div>
+
+    <!-- Identificador de mes y año -->
+    <div class="text-center mb-4">
+        <h4 class="font-weight-bold" style="color: #7C3AED;">Mostrando actividades para Abril, 2025</h4>
+    </div>
+
+    <!-- Calendario -->
+    <div class="calendar-container">
+        <table class="table table-bordered text-center" style="border-color: #7C3AED;">
+            <thead class="bg-light">
+                <tr style="background-color: #10B981; color: #FFFFFF;">
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                    <th>Sábado</th>
+                    <th>Domingo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejemplo de actividades con fechas completas -->
+                <tr>
+                    <td style="height: 100px; color: #333333;">
+                        Reunión<br>01/04/2025<br>
+                        <button class="btn btn-sm" style="background-color: #7C3AED; color: #FFFFFF;">Ver Detalles</button>
+                        <button class="btn btn-outline" style="border-color: #7C3AED; color: #7C3AED;">Desuscribirse</button>
+                    </td>
+                    <td style="height: 100px; color: #333333;"></td>
+                    <td style="height: 100px; color: #333333;">
+                        Workshop<br>03/04/2025<br>
+                        <button class="btn btn-sm" style="background-color: #7C3AED; color: #FFFFFF;">Ver Detalles</button>
+                        <button class="btn btn-outline" style="border-color: #7C3AED; color: #7C3AED;">Suscribirse</button>
+                    </td>
+                    <td style="height: 100px; color: #333333;"></td>
+                    <td style="height: 100px; color: #333333;">
+                        Seminario<br>05/04/2025<br>
+                        <button class="btn btn-sm" style="background-color: #7C3AED; color: #FFFFFF;">Ver Detalles</button>
+                        <button class="btn btn-outline" style="border-color: #7C3AED; color: #7C3AED;">Suscribirse</button>
+                    </td>
+                    <td style="height: 100px; color: #333333;"></td>
+                    <td style="height: 100px; color: #333333;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 100px; color: #333333;"></td>
+                    <td style="height: 100px; color: #333333;"></td>
+                    <td style="height: 100px; color: #333333;"></td>
+                    <td style="height: 100px; color: #333333;"></td>
+                    <td style="height: 100px; color: #333333;"></td>
+                    <td style="height: 100px; color: #333333;"></td>
+                    <td style="height: 100px; color: #333333;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

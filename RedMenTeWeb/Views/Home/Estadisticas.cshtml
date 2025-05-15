@@ -1,0 +1,107 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container my-5" style="height: 100vh;">
+    <!-- Encabezado -->
+    <h1 class="text-center mb-4" style="color: #10B981;">Estadísticas y Reportes</h1>
+    <p class="text-center mb-4" style="color: #333333;">
+        Este módulo presenta una visión general de las métricas clave y reportes generados, facilitando el análisis de la información para la toma de decisiones. Utiliza los gráficos y reportes disponibles para obtener un panorama claro.
+    </p>
+
+
+    <!-- Sección de reportes -->
+    <div class="card shadow-lg mt-4">
+        <div class="card-header text-center" style="background-color: #10B981; color: #FFFFFF;">Reportes Generados</div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item" style="color: #333333;">
+                    <strong>Reporte Mensual: </strong> Resumen de actividades y usuarios activos durante el último mes.
+                    <button class="btn btn-sm float-right" style="background-color: #10B981; color: #FFFFFF;">Ver Reporte</button>
+                </li>
+                <li class="list-group-item" style="color: #333333;">
+                    <strong>Reporte de Impacto: </strong> Métricas relacionadas con eventos y participación.
+                    <button class="btn btn-sm float-right" style="background-color: #10B981; color: #FFFFFF;">Ver Reporte</button>
+                </li>
+                <li class="list-group-item" style="color: #333333;">
+                    <strong>Reporte Personalizado: </strong> Estadísticas adaptadas según criterios seleccionados.
+                    <button class="btn btn-sm float-right" style="background-color: #10B981; color: #FFFFFF;">Ver Reporte</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Métricas adicionales -->
+    <div class="container-fluid py-5">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card border-0 shadow">
+                    <div class="card-body">
+                        <h5 class="text-primary card-title" style="color: #10B981;">Total Reportes Generados</h5>
+                        <h3 class="font-weight-bold">25</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 shadow">
+                    <div class="card-body">
+                        <h5 class="text-success card-title" style="color: #10B981;">Último Reporte Exportado</h5>
+                        <h3 class="font-weight-bold">03/04/2025</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Opciones de exportación -->
+        <div class="card border-0 shadow">
+            <div class="card-header text-white" style="background-color: #10B981;">
+                <h5 class="m-0">Opciones de Exportación</h5>
+            </div>
+            <div class="card-body">
+                <p style="color: #6B7280;">Selecciona un formato para exportar los reportes generados:</p>
+                <button class="btn" style="background-color: #10B981; color: #FFFFFF;">Exportar como PDF</button>
+                <button class="btn" style="background-color: #7C3AED; color: #FFFFFF;">Exportar como Excel</button>
+                <button class="btn" style="background-color: #6B7280; color: #FFFFFF;">Exportar como CSV</button>
+            </div>
+        </div>
+
+        <!-- Historial de exportaciones -->
+        <div class="card border-0 shadow mt-4">
+            <div class="card-header text-white" style="background-color: #10B981;">
+                <h5 class="m-0">Historial de Exportaciones</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr style="color: #6B7280;">
+                            <th>Reporte</th>
+                            <th>Fecha</th>
+                            <th>Formato</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="color: #333333;">Informe de Progreso - Energía Renovable</td>
+                            <td style="color: #333333;">01/04/2025</td>
+                            <td style="color: #333333;">PDF</td>
+                            <td><button class="btn btn-outline-primary btn-sm" style="color: #10B981;">Descargar</button></td>
+                        </tr>
+                        <tr>
+                            <td style="color: #333333;">Impacto de Contribuciones - Innovación Educativa</td>
+                            <td style="color: #333333;">28/03/2025</td>
+                            <td style="color: #333333;">Excel</td>
+                            <td><button class="btn btn-outline-primary btn-sm" style="color: #10B981;">Descargar</button></td>
+                        </tr>
+                        <tr>
+                            <td style="color: #333333;">Estadísticas de Participantes</td>
+                            <td style="color: #333333;">25/03/2025</td>
+                            <td style="color: #333333;">CSV</td>
+                            <td><button class="btn btn-outline-primary btn-sm" style="color: #10B981;">Descargar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

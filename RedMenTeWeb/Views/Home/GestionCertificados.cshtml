@@ -1,0 +1,70 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid py-5" style="height: 100vh;">
+    <div class="container py-5">
+        <h2 class="font-weight-bold" style="color: #10B981;">Administración de Certificados</h2>
+        <p class="font-weight-bold" style="color: #333333;">Supervisa y gestiona los certificados emitidos, pendientes y con errores.</p>
+
+        <!-- Certificados Emitidos -->
+        <div class="card border-0 shadow mb-4">
+            <div class="card-header text-white" style="background-color: #7C3AED;">
+                <h5 class="m-0">Certificados Emitidos</h5>
+            </div>
+            <div class="card-body">
+                <div class="media mb-4">
+                    <img class="rounded mr-3" src="assets/img/certificate-placeholder.png" alt="Certificado" style="width:100px;height:100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0" style="color: #7C3AED;">Certificado en Energía Renovable</h5>
+                        <p class="text-muted">Emitido por: <span style="color: #7C3AED;">Juan Pérez</span> - 15 de marzo de 2025</p>
+                        <button class="btn btn-outline-secondary btn-sm" style="color: #7C3AED; border-color: #7C3AED;">Ver Detalle</button>
+                    </div>
+                </div>
+                <div class="media mb-4">
+                    <img class="rounded mr-3" src="assets/img/certificate-placeholder.png" alt="Certificado" style="width:100px;height:100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0" style="color: #7C3AED;">Certificado en Innovación Educativa</h5>
+                        <p class="text-muted">Emitido por: <span style="color: #7C3AED;">María López</span> - 10 de febrero de 2025</p>
+                        <button class="btn btn-outline-secondary btn-sm" style="color: #7C3AED; border-color: #7C3AED;">Ver Detalle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certificados Pendientes -->
+        <div class="card border-0 shadow mb-4">
+            <div class="card-header text-white" style="background-color: #FFA500;">
+                <h5 class="m-0">Certificados Pendientes</h5>
+            </div>
+            <div class="card-body">
+                <div class="media mb-4">
+                    <img class="rounded mr-3" src="assets/img/certificate-placeholder.png" alt="Certificado" style="width:100px;height:100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0" style="color: #7C3AED;">Certificado en Tecnología Avanzada</h5>
+                        <p class="text-muted">Estado: En proceso para <span style="color: #7C3AED;">Carlos Gómez</span></p>
+                        <button class="btn btn-outline-info btn-sm" style="color: #7C3AED; border-color: #7C3AED;">Reintentar Generación</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certificados con Errores -->
+        <div class="card border-0 shadow">
+            <div class="card-header text-white" style="background-color: #FF0000;">
+                <h5 class="m-0">Certificados con Errores</h5>
+            </div>
+            <div class="card-body">
+                <div class="media mb-4">
+                    <img class="rounded mr-3" src="assets/img/certificate-placeholder.png" alt="Certificado" style="width:100px;height:100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0" style="color: #7C3AED;">Certificado en Innovación Educativa</h5>
+                        <p class="text-muted">Error técnico al generar para <span style="color: #7C3AED;">Ana Rodríguez</span></p>
+                        <button class="btn btn-outline-danger btn-sm" style="color: #FF0000; border-color: #FF0000;">Notificar al Equipo Técnico</button>
+                        <button class="btn btn-outline-secondary btn-sm" style="color: #7C3AED; border-color: #7C3AED;">Ver Detalle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

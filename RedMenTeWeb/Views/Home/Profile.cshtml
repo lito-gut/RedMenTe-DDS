@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container my-5" style="height: 90vh;">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card border-0 shadow">
+                <div class="card-body text-center">
+                    <img class="rounded-circle mb-3" src="assets/img/user-placeholder.png" alt="Foto de perfil" style="width:150px;height:150px;">
+                    <h4 class="font-weight-bold" style="color: #7C3AED;">Juan Pérez</h4>
+                    <p class="font-weight-bold" style="color: #7C3AED;">Usuario Regular</p>
+                    <button class="btn btn-primary btn-block mt-3" style="background-color: #10B981; border-color: #7C3AED;">Editar Perfil</button>
+                    <button class="btn btn-outline-danger btn-block mt-2" style="color: #7C3AED; border-color: #7C3AED;">Eliminar Cuenta</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="card border-0 shadow mb-4">
+                <div class="card-header text-white" style="background-color: #10B981;">
+                    <h5 class="m-0">Información Personal</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong style="color: #7C3AED;">Nombre:</strong> Juan Pérez</p>
+                    <p><strong style="color: #7C3AED;">Correo Electrónico:</strong> juan.perez@example.com</p>
+                    <p><strong style="color: #7C3AED;">Teléfono:</strong> +506 8821-2322</p>
+                    <p><strong style="color: #7C3AED;">Rol:</strong> Usuario Regular</p>
+                </div>
+            </div>
+            <div class="card border-0 shadow mb-4">
+                <div class="card-header text-white" style="background-color: #10B981;">
+                    <h5 class="m-0">Resumen de Actividades</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong style="color: #7C3AED;">Proyectos Completados:</strong><span> 5</span></li>
+                        <li class="list-group-item"><strong style="color: #7C3AED;">Actividades en Progreso:</strong><span> 3</span></li>
+                        <li class="list-group-item"><strong style="color: #7C3AED;">Última Actividad:</strong><span> 01/04/2025</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card border-0 shadow">
+                <div class="card-header text-white" style="background-color: #10B981;">
+                    <h5 class="m-0">Notificaciones</h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-warning"><i class="fas fa-exclamation-circle"></i> Han pasado más de 6 meses desde tu última actualización. <a href="#" style="color: #7C3AED;">Actualiza tu perfil</a>.</p>
+                    <p class="text-danger"><i class="fas fa-times-circle"></i> Faltan datos obligatorios en tu perfil. <a href="#" style="color: #7C3AED;">Completa tu información</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid my-5" style="height: 90vh; max-width: 1100px;">
+    
+        <h2 class="font-weight-bold" style="color: #333333;">Recordatorios y Progreso</h2>
+        <p class="font-weight-bold" style="color: #7C3AED;">Mantente al día con tus cursos y certificaciones pendientes.</p>
+
+        <!-- Cursos en Progreso -->
+        <div class="card border-0 shadow mb-4">
+            <div class="card-header text-white" style="background-color: #7C3AED;">
+                <h5 class="m-0">Cursos en Progreso</h5>
+            </div>
+            <div class="card-body">
+                <div class="media mb-4">
+                    <img class="rounded mr-3" src="assets/img/course-placeholder.png" alt="Curso" style="width:100px;height:100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0">Curso de Energía Renovable</h5>
+                        <p class="text-muted">Última actividad: Hace 2 semanas</p>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar" role="progressbar" style="width: 60%; background-color: #7C3AED;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm" style="color: #7C3AED; border-color: #7C3AED;">Continuar Curso</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Actividades Pendientes -->
+        <div class="card border-0 shadow mb-4">
+            <div class="card-header text-white" style="background-color: #FFA500;">
+                <h5 class="m-0">Actividades Pendientes</h5>
+            </div>
+            <div class="card-body">
+                <div class="media mb-4">
+                    <img class="rounded mr-3" src="assets/img/activity-placeholder.png" alt="Actividad" style="width:100px;height:100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0">Proyecto Final: Innovación Educativa</h5>
+                        <p class="text-muted">Fecha límite: 10 de abril de 2025</p>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <button class="btn btn-outline-warning btn-sm">Completar Actividad</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cursos Vencidos -->
+        <div class="card border-0 shadow">
+            <div class="card-header text-white" style="background-color: #FF0000;">
+                <h5 class="m-0">Cursos Vencidos</h5>
+            </div>
+            <div class="card-body">
+                <div class="media mb-4">
+                    <img class="rounded mr-3" src="assets/img/course-placeholder.png" alt="Curso" style="width:100px;height:100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0">Curso de Tecnología Avanzada</h5>
+                        <p class="text-muted">Estado: Vencido el 1 de marzo de 2025</p>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <button class="btn btn-outline-danger btn-sm">Reinscribirse</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+</div>
