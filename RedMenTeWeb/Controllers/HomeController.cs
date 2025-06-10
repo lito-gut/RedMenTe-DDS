@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RedMenTeWeb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -151,6 +152,13 @@ namespace RedMenTeWeb.Controllers
         public ActionResult Voluntarios()
         {
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult ProfileAdmin()
+        {
+            var Usuarios = new List<UsuarioModel>(); // Replace with actual data retrieval logic
+            return View("ProfileAdmin", Usuarios);
         }
 
         #endregion

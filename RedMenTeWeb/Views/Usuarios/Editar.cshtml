@@ -1,0 +1,53 @@
+﻿@model RedMenTeWeb.Models.UsuarioModel
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Editar Usuario";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Editar Usuario</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="mb-3">
+            <label class="form-label">Usuario ID</label>
+            <input type="text" class="form-control" value="@Model.UsuarioID" readonly />
+            @Html.HiddenFor(m => m.UsuarioID)
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control", placeholder = "Nombre" })
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Correo</label>
+            @Html.TextBoxFor(m => m.Correo, new { @class = "form-control", placeholder = "Correo electrónico" })
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Rol</label>
+            @Html.TextBoxFor(m => m.Rol, new { @class = "form-control", placeholder = "Rol del usuario" })
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Edad</label>
+            @Html.TextBoxFor(m => m.Edad, new { @class = "form-control", type = "number", min = "0" })
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Programa ID</label>
+            @Html.TextBoxFor(m => m.ProgramaID, new { @class = "form-control", type = "number", min = "1" })
+        </div>
+
+        <div class="form-check mb-4">
+            @Html.CheckBoxFor(m => m.Estado, new { @class = "form-check-input" })
+            <label class="form-check-label">¿Activo?</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        <a href="@Url.Action("Index", "Usuarios")" class="btn btn-secondary ms-2">Cancelar</a>
+    }
+</div>
