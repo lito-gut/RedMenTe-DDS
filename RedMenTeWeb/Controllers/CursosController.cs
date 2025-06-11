@@ -15,7 +15,7 @@ namespace RedMenTeWeb.Controllers
 
         public ActionResult Index(string filtro = "", int pagina = 1)
         {
-            const int registrosPorPagina = 4;
+            const int registrosPorPagina = 2;
             var todosLosCursos = cursoDao.BuscarCurso(filtro ?? "");
 
             // Paginación manual

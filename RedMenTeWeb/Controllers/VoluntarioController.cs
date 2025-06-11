@@ -10,7 +10,7 @@ namespace RedMenTeWeb.Controllers
     {
         private VoluntarioDao voluntarioDao = new VoluntarioDao();
 
-        // GET: Voluntario
+        // GET: Voluntario/Buscar
         public ActionResult Buscar(string filtro = "", int pagina = 1)
         {
             const int registrosPorPagina = 4;
@@ -27,14 +27,16 @@ namespace RedMenTeWeb.Controllers
             ViewBag.PaginaActual = pagina;
             ViewBag.TotalPaginas = totalPaginas;
             ViewBag.Filtro = filtro;
-            return View("Index", voluntariosPaginados);
+            ViewBag.Voluntarios = voluntariosPaginados;
+
+            return View("Index", new Voluntario());
         }
 
         // GET: Voluntario/Crear
         [HttpGet]
         public ActionResult Crear()
         {
-            return View();
+            return RedirectToAction("Buscar"); // Redirige a la vista paginada
         }
 
         // POST: Voluntario/Crear
@@ -47,11 +49,8 @@ namespace RedMenTeWeb.Controllers
                 try
                 {
                     voluntarioDao.AgregarVoluntario(voluntario);
-
-                    // Guardar el ID del voluntario recién registrado en la sesión
                     Session["VoluntarioID"] = voluntario.VoluntarioID;
-
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Buscar");
                 }
                 catch (Exception ex)
                 {
@@ -59,11 +58,9 @@ namespace RedMenTeWeb.Controllers
                 }
             }
 
-            // Cargar lista de voluntarios en caso de error para que no se pierda la vista
-            ViewBag.Voluntarios = voluntarioDao.BuscarVoluntario("");
-            return View("Index", voluntario);
+            // En caso de error, mostrar los voluntarios de la primera página
+            return Buscar();
         }
-
 
         // GET: Voluntario/Editar/5
         public ActionResult Editar(int id)
@@ -88,7 +85,7 @@ namespace RedMenTeWeb.Controllers
                 try
                 {
                     voluntarioDao.ActualizarVoluntario(voluntario);
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Buscar");
                 }
                 catch (Exception ex)
                 {
@@ -105,33 +102,26 @@ namespace RedMenTeWeb.Controllers
             int? miVoluntarioID = Session["VoluntarioID"] as int?;
             if (miVoluntarioID == null || miVoluntarioID.Value != id)
             {
-                // No permito eliminar si el id no coincide con el de la sesión
                 return new HttpStatusCodeResult(403, "No autorizado para eliminar este voluntario.");
             }
 
             try
             {
                 voluntarioDao.EliminarVoluntario(id);
-                Session.Remove("VoluntarioID"); // Opcional, si quieres eliminar el id guardado
-                return RedirectToAction("Index");
+                Session.Remove("VoluntarioID");
+                return RedirectToAction("Buscar");
             }
             catch (Exception ex)
             {
                 ModelState.AddModelError("", "Error al eliminar el voluntario: " + ex.Message);
-                return RedirectToAction("Index");
+                return RedirectToAction("Buscar");
             }
         }
-
 
         // GET: Voluntario/Index
         public ActionResult Index()
         {
-            var voluntarios = voluntarioDao.BuscarVoluntario(""); // Obtener todos los voluntarios
-            ViewBag.Voluntarios = voluntarios; // Pasar al ViewBag
-
-            return View(new Voluntario()); // Pasar un modelo vacío para el formulario
+            return RedirectToAction("Buscar");
         }
-
-
     }
 }

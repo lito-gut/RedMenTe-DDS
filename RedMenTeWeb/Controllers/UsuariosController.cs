@@ -16,7 +16,7 @@ namespace RedMenTeWeb.Controllers
         // GET: Usuarios
         public ActionResult Index(string filtro = "", int pagina = 1)
         {
-            const int registrosPorPagina = 12;
+            const int registrosPorPagina = 8;
             var todosLosUsuarios = usuarioDao.BuscarUsuario(filtro ?? "");
 
             // Paginación manual
