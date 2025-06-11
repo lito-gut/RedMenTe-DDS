@@ -1,0 +1,39 @@
+﻿@model List<RedMenTeWeb.Models.ProyectosModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2>Proyectos</h2>
+    <a href="@Url.Action("Crear", "Proyecto")" class="btn btn-success mb-3">Agregar Proyecto</a>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>ODS</th>
+                <th>Estado</th>
+                <th>Inicio</th>
+                <th>Fin</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var proyecto in Model)
+            {
+                <tr>
+                    <td>@proyecto.Nombre</td>
+                    <td>@proyecto.ODS</td>
+                    <td>@proyecto.Estado</td>
+                    <td>@proyecto.FechaInicio.ToShortDateString()</td>
+                    <td>@proyecto.FechaFin.ToShortDateString()</td>
+                    <td>
+                        <a href="@Url.Action("Editar", new { id = proyecto.ProyectoID })" class="btn btn-warning btn-sm">Editar</a>
+                        <a href="@Url.Action("Eliminar", new { id = proyecto.ProyectoID })" class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

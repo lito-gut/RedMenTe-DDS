@@ -1,8 +1,7 @@
-﻿using System;
+﻿using RedMenTeWeb.Models; // Asegúrate de tener este namespace
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Web.Mvc;
-using RedMenTeWeb.Models; // Asegúrate de tener este namespace
 
 public class PerfilController : Controller
 {

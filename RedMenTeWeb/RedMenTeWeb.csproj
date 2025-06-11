@@ -111,11 +111,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GestionProyectosController.cs" />
+    <Compile Include="Controllers\ProyectoController.cs" />
+    <Compile Include="Controllers\CursoController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\GestionProyectosModel.cs" />
+    <Compile Include="Models\CursosModel.cs" />
+    <Compile Include="Models\ProyectosModel.cs" />
     <Compile Include="Models\UsuarioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -338,16 +344,27 @@
     <Content Include="Views\Home\GestionCalendario.cshtml" />
     <Content Include="Views\Home\GestionCertificados.cshtml" />
     <Content Include="Views\Home\GestionForo.cshtml" />
-    <Content Include="Views\Home\GestionProyectos.cshtml" />
     <Content Include="Views\Home\Participantes.cshtml" />
     <Content Include="Views\Home\Patrocinadores.cshtml" />
     <Content Include="Views\Home\Retroalimentacion.cshtml" />
     <Content Include="Views\Home\Voluntarios.cshtml" />
     <Content Include="Views\Perfil\Editar.cshtml" />
     <Content Include="Views\Perfil\PerfilActualizado.cshtml" />
+    <Content Include="Views\Curso\Editar.cshtml" />
+    <Content Include="Views\Proyecto\Editar.cshtml" />
+    <Content Include="Views\Curso\Index.cshtml" />
+    <Content Include="Views\Proyecto\Index.cshtml" />
+    <Content Include="Views\Curso\Crear.cshtml" />
+    <Content Include="Views\Curso\Eliminar.cshtml" />
+    <Content Include="Views\Proyecto\Crear.cshtml" />
+    <Content Include="Views\Proyecto\Eliminar.cshtml" />
+    <Content Include="Views\Home\GestionProyectos.cshtml" />
+    <Content Include="Views\Proyecto\CrearProyectoExito.cshtml" />
+    <Content Include="Views\Curso\CrearCursoExito.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

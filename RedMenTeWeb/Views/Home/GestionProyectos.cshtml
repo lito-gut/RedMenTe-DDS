@@ -8,8 +8,16 @@
         <p class="font-weight-bold" style="color: #333333;">Administra los proyectos y cursos disponibles en el sistema.</p>
         <div class="row mb-4">
             <div class="col-lg-6">
-                <button class="btn" style="background-color: #7C3AED; color: #FFFFFF; margin-right: 10px;">Crear Nuevo Proyecto</button>
-                <button class="btn" style="background-color: #7C3AED; color: #FFFFFF;">Crear Nuevo Curso</button>
+                <button class="btn" style="background-color: #7C3AED; color: #FFFFFF; margin-right: 10px;"
+                        onclick="location.href='@Url.Action("Crear", "Proyecto")'">
+                    Crear Nuevo Proyecto
+                </button>
+
+                <button class="btn" style="background-color: #7C3AED; color: #FFFFFF;"
+                        onclick="location.href='@Url.Action("Crear", "Curso")'">
+                    Crear Nuevo Curso
+                </button>
+
             </div>
         </div>
 
