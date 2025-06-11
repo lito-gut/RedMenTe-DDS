@@ -31,8 +31,8 @@ namespace RedMenTeWeb.Controllers
             ViewBag.PaginaActual = pagina;
             ViewBag.TotalPaginas = totalPaginas;
             ViewBag.Filtro = filtro;
-
-            return View("ProfileAdmin", usuariosPaginados); // O "Index" si usas esa vista
+            // Pasar los datos a la vista
+            return View("ProfileAdmin", usuariosPaginados); 
         }
 
 
@@ -69,7 +69,7 @@ namespace RedMenTeWeb.Controllers
             return RedirectToAction("Index");
         }
 
-        // Método para probar la conexión, útil para debugging
+        // Método para probar la conexión
         public string ProbarConexion()
         {
             try
@@ -77,12 +77,12 @@ namespace RedMenTeWeb.Controllers
                 using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ProyectoDbConnection"].ConnectionString))
                 {
                     conn.Open();
-                    return "✅ Conexión exitosa a la base de datos.";
+                    return "Conexión exitosa a la base de datos.";
                 }
             }
             catch (Exception ex)
             {
-                return "❌ Error de conexión: " + ex.Message;
+                return "Error de conexión: " + ex.Message;
             }
         }
 

@@ -157,7 +157,7 @@ namespace RedMenTeWeb.Controllers
         [HttpGet]
         public ActionResult ProfileAdmin()
         {
-            var Usuarios = new List<UsuarioModel>(); // Replace with actual data retrieval logic
+            var Usuarios = new List<UsuarioModel>(); 
             return View("ProfileAdmin", Usuarios);
         }
 

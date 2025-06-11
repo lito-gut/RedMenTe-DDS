@@ -118,13 +118,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CursosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Data\ConexionDB.cs" />
+    <Compile Include="Data\CursoDao.cs" />
     <Compile Include="Data\UsuarioDao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Curso.cs" />
     <Compile Include="Models\ProyectoContext.cs" />
     <Compile Include="Models\UsuarioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -348,13 +351,15 @@
     <Content Include="Views\Home\GestionCalendario.cshtml" />
     <Content Include="Views\Home\GestionCertificados.cshtml" />
     <Content Include="Views\Home\GestionForo.cshtml" />
-    <Content Include="Views\Home\GestionProyectos.cshtml" />
+    <Content Include="Views\Cursos\GestionProyectos.cshtml" />
     <Content Include="Views\Home\Participantes.cshtml" />
     <Content Include="Views\Home\Patrocinadores.cshtml" />
     <Content Include="Views\Home\Retroalimentacion.cshtml" />
     <Content Include="Views\Home\Voluntarios.cshtml" />
     <Content Include="Views\Usuarios\ProfileAdmin.cshtml" />
     <Content Include="Views\Usuarios\Editar.cshtml" />
+    <Content Include="Views\Cursos\Crear.cshtml" />
+    <Content Include="Views\Cursos\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
