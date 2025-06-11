@@ -1,0 +1,28 @@
+﻿@model RedMenTeWeb.Models.Voluntario
+
+@{
+    ViewBag.Title = "Editar Voluntario";
+}
+
+<h2 class="text-2xl font-bold mb-4">Editar Voluntario</h2>
+
+@using (Html.BeginForm("Editar", "Voluntario", FormMethod.Post, new { @class = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.VoluntarioID)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nombre)
+        @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Estado, "Activo")
+        @Html.CheckBoxFor(model => model.Estado)
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Guardar Cambios</button>
+    @Html.ActionLink("Volver a la lista", "Index", "Voluntario", null, new { @class = "btn btn-secondary ml-2" })
+}
+

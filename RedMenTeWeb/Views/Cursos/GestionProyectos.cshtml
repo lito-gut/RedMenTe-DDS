@@ -1,0 +1,98 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Gestión de Proyectos";
+}
+
+@model List<RedMenTeWeb.Models.Curso>
+
+<div class="container-fluid py-5" style="height: 100vh;">
+    <div class="container py-5">
+        <h2 class="font-weight-bold" style="color: #10B981;">Gestión de Proyectos y Cursos</h2>
+        <p class="font-weight-bold" style="color: #333333;">Administra los proyectos y cursos disponibles en el sistema.</p>
+        <div class="row mb-4">
+            <div class="col-lg-6">
+                <a href="@Url.Action("Crear", "Cursos")" class="btn" style="background-color: #7C3AED; color: #FFFFFF; margin-right: 10px;">Crear Nuevo Proyecto</a>
+            </div>
+        </div>
+
+        <!-- Gestión de Proyectos -->
+        <div class="card border-0 shadow mb-4">
+            <div class="card-header text-white" style="background-color: #7C3AED;">
+                <h5 class="m-0">Gestión de Proyectos</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong style="color: #7C3AED;">Proyecto 1:</strong>
+                        <span> Innovación en Educación </span>
+                        <button class="btn btn-link" style="color: #7C3AED; float: right;">Editar</button>
+                        <button class="btn btn-link" style="color: #FF0000; float: right;">Eliminar</button>
+                    </li>
+                    <li class="list-group-item">
+                        <strong style="color: #7C3AED;">Proyecto 2:</strong>
+                        <span> Energía Renovable </span>
+                        <button class="btn btn-link" style="color: #7C3AED; float: right;">Editar</button>
+                        <button class="btn btn-link" style="color: #FF0000; float: right;">Eliminar</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Gestión de Cursos -->
+        <div class="card border-0 shadow">
+            <div class="card-header text-white" style="background-color: #10B981;">
+                <h5 class="m-0">Gestión de Cursos</h5>
+            </div>
+            <div class="card-body">
+                @if (Model != null && Model.Any())
+                {
+                    <div class="row">
+                        @foreach (var curso in Model)
+                        {
+                            <div class="col-md-6 mb-4">
+                                <div class="card shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="color: #10B981;">@curso.Nombre</h5>
+                                        <p class="card-text">@curso.Descripcion</p>
+                                        <div class="d-flex justify-content-end">
+                                            @Html.ActionLink("Editar", "Editar", "Cursos", new { id = curso.CursoID }, new { @class = "btn btn-link", style = "color: #10B981;" })
+
+                                            @using (Html.BeginForm("Eliminar", "Cursos", FormMethod.Post, new { onsubmit = "return confirm('¿Estás seguro de que deseas eliminar este curso?');" }))
+                                            {
+                                                @Html.Hidden("id", curso.CursoID)
+                                                <button type="submit" class="btn btn-link text-danger">Eliminar</button>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <!-- Paginación -->
+                    if (ViewBag.TotalPaginas > 1)
+                    {
+                        <nav aria-label="Paginación de cursos">
+                            <ul class="pagination justify-content-center">
+                                @for (int i = 1; i <= ViewBag.TotalPaginas; i++)
+                                {
+                                    <li class="page-item @(ViewBag.PaginaActual == i ? "active" : "")">
+                                        @Html.ActionLink(i.ToString(), "Index", "Cursos", new { pagina = i, filtro = ViewBag.Filtro }, new { @class = "page-link" })
+                                    </li>
+                                }
+                            </ul>
+                        </nav>
+                    }
+                }
+                else
+                {
+                    <p class="text-muted">No hay cursos disponibles.</p>
+                }
+
+                <div class="mt-4">
+                    @Html.ActionLink("Crear Nuevo Curso", "Crear", "Cursos", null, new { @class = "btn btn-success" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
