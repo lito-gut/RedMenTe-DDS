@@ -29,16 +29,20 @@
                     {
                         <form class="user">
                             <div class="form-group">
-                                @Html.TextBoxFor(x => x.Identificacion, new { @class = "form-control form-control-user", @placeholder = "Identificación", @style = "background-color: #FFFFFF; color: #333333; border: 1px solid #7C3AED;" })
+                                Identificación
+                                @Html.TextBoxFor(x => x.Identificacion, new { @class = "form-control form-control-user", @Required = "true", @onkeyup = "QueryName();" })
                             </div>
                             <div class="form-group">
-                                @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control form-control-user", @placeholder = "Nombre", @style = "background-color: #FFFFFF; color: #333333; border: 1px solid #7C3AED;" })
+                                Nombre
+                                @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control form-control-user", @Required = "true", @ReadOnly = "true" })
                             </div>
                             <div class="form-group">
-                                @Html.TextBoxFor(x => x.Correo, new { @class = "form-control form-control-user", @placeholder = "Correo", @style = "background-color: #FFFFFF; color: #333333; border: 1px solid #7C3AED;" })
+                                Correo
+                                @Html.TextBoxFor(x => x.Correo, new { @class = "form-control form-control-user", @type = "Email", @Required = "true" })
                             </div>
                             <div class="form-group">
-                                @Html.TextBoxFor(x => x.Contrasenna, new { @class = "form-control form-control-user", @placeholder = "Contraseña", @type = "password", @style = "background-color: #FFFFFF; color: #333333; border: 1px solid #7C3AED;" })
+                                Contraseña
+                                @Html.TextBoxFor(x => x.Contrasenna, new { @class = "form-control form-control-user", @type = "password", @Required = "true" })
                             </div>
                             <input type="submit" class="btn btn-block" value="Registrar Cuenta" style="background-color: #3B82F6; color: #FFFFFF; border: none;"
                                    onmouseover="this.style.backgroundColor='#7C3AED'; this.style.color='#FFFFFF';"
