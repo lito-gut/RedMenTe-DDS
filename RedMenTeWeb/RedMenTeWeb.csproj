@@ -121,12 +121,15 @@
     <Compile Include="Controllers\CursosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Controllers\VoluntarioController.cs" />
     <Compile Include="Data\ConexionDB.cs" />
     <Compile Include="Data\CursoDao.cs" />
     <Compile Include="Data\UsuarioDao.cs" />
+    <Compile Include="Data\VoluntarioDao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Voluntario.cs" />
     <Compile Include="Models\Curso.cs" />
     <Compile Include="Models\ProyectoContext.cs" />
     <Compile Include="Models\UsuarioModel.cs" />
@@ -360,6 +363,9 @@
     <Content Include="Views\Usuarios\Editar.cshtml" />
     <Content Include="Views\Cursos\Crear.cshtml" />
     <Content Include="Views\Cursos\Editar.cshtml" />
+    <Content Include="Views\Voluntario\Index.cshtml" />
+    <Content Include="Views\Voluntario\Editar.cshtml" />
+    <Content Include="Views\Voluntario\Crear.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
