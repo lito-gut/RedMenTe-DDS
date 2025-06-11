@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model IEnumerable<RedMenTeWeb.Models.UsuarioModel>
+
+@{
+    ViewBag.Title = "Lista de Usuarios";
+}
+
+
+<div class="container mt-5">
+    <h2 class="mb-4">Usuarios</h2>
+
+    <form method="get" class="mb-4 d-flex">
+        <input type="text" name="filtro" class="form-control me-2" placeholder="Buscar por nombre, correo o ID" value="@ViewBag.Filtro" />
+        <button type="submit" class="btn btn-success">Buscar</button>
+    </form>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-success">
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Rol</th>
+                <th>Edad</th>
+                <th>ProgramaID</th>
+                <th>Estado</th>
+                <th class="text-center">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var usuario in Model)
+            {
+                <tr>
+                    <td>@usuario.Nombre</td>
+                    <td>@usuario.Correo</td>
+                    <td>@usuario.Rol</td>
+                    <td>@usuario.Edad</td>
+                    <td>@usuario.ProgramaID</td>
+                    <td>
+                        @if (usuario.Estado)
+                        {
+                            <span class="badge bg-success">Activo</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">Inactivo</span>
+                        }
+                    </td>
+                    <td class="text-center">
+                        @Html.ActionLink("Editar", "Editar", new { id = usuario.UsuarioID }, new { @class = "btn btn-sm btn-warning me-1" })
+                        @using (Html.BeginForm("Desactivar", "Usuarios", new { id = usuario.UsuarioID }, FormMethod.Post, new { @onsubmit = "return confirm('¿Estás seguro de desactivar este usuario?');", @style = "display:inline" }))
+                        {
+                            <button type="submit" class="btn btn-sm btn-danger">Desactivar</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+
+            @for (int i = 1; i <= ViewBag.TotalPaginas; i++)
+            {
+                <li class="page-item @(i == ViewBag.PaginaActual ? "active" : "")">
+                    <a class="page-link" href="@Url.Action("Index", "Usuarios", new { pagina = i, filtro = ViewBag.Filtro })">@i</a>
+                </li>
+            }
+        </ul>
+    </nav>
+
+</div>

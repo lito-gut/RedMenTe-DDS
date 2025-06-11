@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RedMenTeWeb.Models;
+using System;
 using System.Collections.Generic;
 using System.EnterpriseServices;
 using System.Linq;
@@ -232,6 +233,13 @@ namespace RedMenTeWeb.Controllers
         public ActionResult Voluntarios()
         {
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult ProfileAdmin()
+        {
+            var Usuarios = new List<UsuarioModel>(); 
+            return View("ProfileAdmin", Usuarios);
         }
 
         #endregion
