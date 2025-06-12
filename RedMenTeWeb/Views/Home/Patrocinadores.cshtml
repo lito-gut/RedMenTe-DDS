@@ -1,6 +1,56 @@
-﻿@{
+﻿@model List<RedMenTeWeb.Models.ContribucionProyectoModel>
+@{
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+
+<div class="container-fluid py-5">
+    <h2 class="text-center mb-4" style="color:#10B981;">Mis Contribuciones</h2>
+
+    
+    @using (Html.BeginForm("AgregarContribucion", "Home", FormMethod.Post))
+    {
+        <div class="row mb-4">
+            <div class="col-md-3">
+                @Html.TextBox("Proyecto", null, new { @class = "form-control", placeholder = "Nombre del Proyecto" })
+            </div>
+            <div class="col-md-3">
+                @Html.TextBox("Monto", null, new { @class = "form-control", placeholder = "Monto ($)" })
+            </div>
+            <div class="col-md-3">
+                @Html.TextBox("Impacto", null, new { @class = "form-control", placeholder = "Impacto (%)" })
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-success">Agregar</button>
+            </div>
+        </div>
+    }
+
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Proyecto</th>
+                <th>Monto</th>
+                <th>Impacto</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Proyecto</td>
+                    <td>@item.Monto</td>
+                    <td>@item.Impacto</td>
+                    <td>
+                        <a href="@Url.Action("EliminarContribucion", "Home", new { id = item.Id })"
+                           class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 <div class="container-fluid py-5" style="height: 100vh;">
     <h1 class="text-center mb-4" style="color: #10B981;">Mis Contribuciones</h1>

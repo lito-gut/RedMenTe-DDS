@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using RedMenTeWeb.Models;
 
 namespace RedMenTeWeb.Controllers
 {
@@ -154,7 +155,29 @@ namespace RedMenTeWeb.Controllers
         }
 
         #endregion
+        public static List<ContribucionProyectoModel> listaContribuciones = new List<ContribucionProyectoModel>
+{
+    new ContribucionProyectoModel { Id = 1, Proyecto = "Energía Renovable", Monto = "$10,000", Impacto = "40%" },
+    new ContribucionProyectoModel { Id = 2, Proyecto = "Innovación Educativa", Monto = "$8,000", Impacto = "35%" },
+    new ContribucionProyectoModel { Id = 3, Proyecto = "Tecnología Avanzada", Monto = "$5,000", Impacto = "25%" }
+};
 
+        
+
+        [HttpPost]
+        public ActionResult AgregarContribucion(ContribucionProyectoModel modelo)
+        {
+            modelo.Id = listaContribuciones.Count > 0 ? listaContribuciones.Max(c => c.Id) + 1 : 1;
+            listaContribuciones.Add(modelo);
+            return RedirectToAction("Patrocinadores");
+        }
+
+        public ActionResult EliminarContribucion(int id)
+        {
+            var item = listaContribuciones.FirstOrDefault(c => c.Id == id);
+            if (item != null) listaContribuciones.Remove(item);
+            return RedirectToAction("Patrocinadores");
+        }
 
         #region Evaluador
 
